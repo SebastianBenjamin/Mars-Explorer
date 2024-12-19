@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       $(document).ready(function() {
+           if(!localStorage.getItem('uname')){
+               console.log("Not logged in");
+               window.location.href = "login.html";
+           }
+           else{
+               window.location.href ="userpage.php";
+           }
+       });
+    </script>
+</body>
+</html>

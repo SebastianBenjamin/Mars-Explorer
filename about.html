@@ -1,0 +1,101 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mars Explorer/About</title>
+        <link rel="icon" href="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/icons8-mars-64.png?raw=true">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--  -->
+    </head>
+    <body >
+    <div class="side-menu">
+
+    <ul id="sidemenuul">
+        <div class="side-menu-header">
+    <div><img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/mars-rover-sidemenu-header.gif?raw=true" alt="sidemenu-header-gif"></div> 
+            MARS EXPLORER
+        </div>
+        <a href="index.html" id="Home">
+            <img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/home.png?raw=true" alt="home">
+            Home</a>
+        <a href="about.html" id="About">
+            <img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/about.png?raw=true" alt="about">
+            About</a>
+        <a href="missions.html" id="Missions">
+            <img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/mission.png?raw=true" alt="mission">
+            Missions</a>
+        <a href="ticket.html" id="Ticket">
+            <img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/ticket.png?raw=true" alt="ticket">
+            Travel to Mars</a>
+        <a href="account.html" id="Account">
+                
+            <img src="https://github.com/SebastianBenjamin/marsrover-resources/blob/main/login.png?raw=true" alt="signup">
+            Account</a>
+    </ul>
+
+        <div class="side-menu-footer">
+
+        </div>
+    </div> 
+
+    <!--                                  Content section starts here                                      -->
+
+    <div class="content" id="content">
+        <div class="content-welcome">
+            <h1>About Mars</h1>
+        </div>
+        
+        <div class="apod-parent" style="flex-direction: column; height: auto;">
+            <video autoplay muted loop>
+                <source src="https://www.dropbox.com/scl/fi/wjk4a0daxsq1jdx6yjzhj/about-video.mp4?rlkey=k1i97hbvjtjbzcozprtuc71e9&st=udv710co&raw=1" >
+                Your browser does not support the video tag.
+            </video>
+
+            <div>
+                <p>
+                    Mars, often referred to as the <strong>Red Planet</strong>, is the fourth planet from the Sun and is known for its striking reddish appearance. With a diameter of approximately <strong>6,779 kilometers</strong>, it is about half the size of Earth and boasts fascinating geological features that continue to intrigue scientists and space enthusiasts alike.
+                </p>
+        
+                <h3 style="font-weight: bold; margin:10px;color:  rgba(255, 255, 255, 0.703);">Basic Facts</h3>
+                <ul style="color:  rgba(255, 255, 255, 0.486);">
+                    <li><strong>Diameter:</strong> Approximately 6,779 kilometers, making it about half the size of Earth.</li>
+                    <li><strong>Distance from Earth:</strong> Ranges from 54.6 million kilometers (33.9 million miles) at its closest to 401 million kilometers (249 million miles) when on the opposite side of the Sun.</li>
+                    <li><strong>Orbital Period:</strong> Mars takes about 687 Earth days to complete a full orbit around the Sun.</li>
+                    <li><strong>Rotation Period:</strong> A day on Mars, known as a <strong>sol</strong>, is roughly 24 hours and 37 minutes long, making it very similar to an Earth day.</li>
+                </ul>
+        
+                <h3 style="font-weight: bold; margin:10px;color:  rgba(255, 255, 255, 0.703);">Surface Characteristics</h3>
+                <p style="color:  rgba(255, 255, 255, 0.486);">
+                    Mars is home to remarkable geological features such as:
+                </p>
+                <ul style="color:  rgba(255, 255, 255, 0.486);">
+                    <li><strong>Olympus Mons:</strong> The tallest volcano, rising 13.6 miles (22 km) above the Martian surface, is nearly three times the height of Mount Everest.</li>
+                    <li><strong>Valles Marineris:</strong> A vast canyon system that stretches over 2,500 miles (4,000 km) long, making it the longest canyon in the solar system.</li>
+                    <li><strong>Polar Ice Caps:</strong> Comprised of water and dry ice (frozen carbon dioxide), these caps expand and contract with the changing seasons, providing insights into Mars' climate.</li>
+                </ul>
+        
+                <h3 style="font-weight: bold; margin:10px;color:  rgba(255, 255, 255, 0.703);">Atmosphere and Climate</h3>
+                <p style="color:  rgba(255, 255, 255, 0.486);">
+                    The Martian atmosphere is thin and composed primarily of carbon dioxide (about 95%), with traces of nitrogen and argon. This thin atmosphere leads to significant temperature fluctuations, with surface temperatures ranging from approximately <strong>-125°C</strong> (-195°F) in winter to <strong>20°C</strong> (68°F) in summer. Dust storms, sometimes enveloping the entire planet, further showcase Mars' dynamic climate.
+                </p>
+        
+                <h3 style="font-weight: bold; margin:10px;color:  rgba(255, 255, 255, 0.703);">Water and Potential for Life</h3>
+                <p style="color:  rgba(255, 255, 255, 0.486);">
+                    Evidence of liquid water on Mars is a significant focus of exploration. Past missions have uncovered signs of ancient riverbeds, lakes, and minerals that typically form in water. Currently, polar ice caps and possible briny liquid water flows suggest that Mars may have once harbored conditions suitable for life.
+                </p>
+    
+            </div>
+        </div>
+        
+     
+    </div>
+    <script>
+        $(() => {
+
+$("#sidemenuul>a:eq(1)").addClass("sidemenu-li");  
+});
+
+    </script>
+    </body>
+    </html> 

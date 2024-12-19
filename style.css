@@ -1,0 +1,504 @@
+body{
+
+margin:0;
+background-color: black;
+color: rgba(112, 93, 207); 
+font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;   
+}
+.side-menu{
+    position:fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid grey;
+    height:100%;
+    background-color: black;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ul{
+        width: 100%;
+        height: 80%;
+        margin: 0;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .side-menu-header{
+            width: 98%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-weight: bold;
+            text-shadow: rgba(240, 248, 255, 0.68) 1px 1px 12px  ;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.511);
+            padding: 10px 0px;
+           div{
+            height: 90px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            img{
+                height:100px;
+                border-radius: 100px;
+                mix-blend-mode: screen;
+            }}
+        }
+        
+        a{
+            margin: 0 10px;
+            list-style: none;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 10px 40px 10px 40px;
+            font-size: medium;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgba(112, 93, 207); 
+            img{
+                height: 22px;
+            }
+        }
+        a:hover{
+            color: white;
+            border-color:rgba(128, 128, 128, 0.511);
+            transition: all 0.3s ease-in-out;
+        }
+        a:focus{
+            color: white;
+            border-color:rgba(128, 128, 128, 0.511);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .side-menu-footer{
+        height: 20%;
+        width: 98%;
+        border-top: 1px solid rgba(128, 128, 128, 0.511);
+    }
+}
+.sidemenu-li{
+    color: white !important;
+    border-color:rgba(128, 128, 128, 0.511) !important;
+}
+.content{
+   margin-left: 20%;
+    width:80% ;
+    min-height: 96vh;
+    background:url(https://github.com/SebastianBenjamin/marsrover-resources/blob/main/bg-patt.jpg?raw=true);
+    background-position: center;
+    background-repeat:repeat-x;
+    background-size: cover;
+    overflow: auto;
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px 0;
+ 
+   .content-welcome{
+    width: 82%;
+    color: white;
+    h1{text-shadow: rgba(240, 248, 255, 0.68) 1px 1px 10px  ; font-weight: normal;}
+    h3{color: rgba(255, 255, 255, 0.418); margin: 5px; font-weight: normal;}
+   }
+}
+::-webkit-scrollbar {
+    width: 2px;
+  }
+::-webkit-scrollbar-thumb {
+    background: rgb(72, 60, 132); 
+    border-radius: 10px;
+  }
+  
+.apod-parent{
+    height: 100%;
+    width: 80%;
+    padding: 15px 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 13px;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    color: white;
+    img{
+      height: 400px;
+      width: 400px;
+      border-radius: 5px ;
+    }
+    img:hover{
+        transform: scale(1.2) !important;
+  transition: all 1s ease-in-out !important;
+   cursor: pointer !important;
+    }
+ 
+    video{
+        height: 400px;
+        width: 100% ;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        source{
+            border-radius: 10px;
+
+        }
+    }
+    h2,h3,h4,p{
+        margin: 5px;
+        
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-weight: normal;
+    }
+    h5{
+        margin:5px;
+        color:  rgba(112, 93, 207); 
+        font-weight: 500;
+    }
+    p{
+        color: rgba(255, 255, 255, 0.664);
+        text-align: justify;
+        font-size: medium;
+    }
+}
+.content-div{
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+    background: rgba(0, 0, 0, 0.4); 
+    padding: 15px; 
+    border-radius: 10px;
+}
+#loader{
+    background-color: rgba(255, 255, 255, 0.258);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+    div{
+        height: 200px;
+        width: 200px;
+        border-radius: 200px;
+        background-color:transparent;
+        border: 15px solid grey;
+        border-top: 15px solid coral;
+        animation: rotate 2s infinite;
+    }
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#login{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:350px;
+    padding: 10px;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    border-radius: 10px;
+    gap: 10px;
+    h2{
+        margin: 10px;
+        text-shadow: rgba(240, 248, 255, 0.68) 1px 1px 10px  ; 
+        color: white;
+        font-weight: normal;
+    }
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+label{
+    width:30%;
+}
+   
+input[type='email'],input[type='password'],input[type='text'],input[type='date'],input[type='tel'],select{
+    width: 70%;
+    height: 40px;
+    background-color: transparent;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    color:  rgba(112, 93, 207); 
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: medium;
+}
+input[type='checkbox']{
+    height: 20px;
+    width: 20px;
+    clip-path: circle(46% at 50% 50%);
+    accent-color: rgba(112, 93, 207);
+}
+input:-webkit-autofill,
+select:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    border:1px solid rgba(128, 128, 128, 0.511);
+  -webkit-text-fill-color:  rgba(112, 93, 207); 
+  transition: background-color 5000s ease-in-out 0s;
+}
+option{
+    background-color: rgb(0, 0, 0);
+    color: rgba(112, 93, 207);
+}
+input[type='date'],select{
+    color: rgba(255, 255, 255, 0.418); 
+    margin: 5px; 
+    font-weight: normal;
+}
+input:hover{
+    border-color: white;
+}
+input[type='submit']:hover{
+    border-color: white;
+
+}
+input[type='submit'],button{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    color:  rgba(112, 93, 207); 
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+input[type='submit']:hover,button:hover{
+    border:1px solid white;
+  background-color:  rgba(112, 93, 207, 0.228); 
+  color:  white;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.418); 
+    margin: 5px; 
+    font-weight: normal;
+}
+span{
+    position: absolute;
+    right: 0px;
+    margin: 15px;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://raw.githubusercontent.com/SebastianBenjamin/marsrover-resources/refs/heads/main/eye.png);
+}
+div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+}
+
+}
+#register{
+display: none;
+}
+#submit{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    color:  rgba(112, 93, 207); 
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+}
+.ticket-parent{
+/* margin-left: 20%; */
+width:80% ;
+display: flex;
+flex-direction: column;
+gap: 20px;
+border:1px solid rgba(128, 128, 128, 0.511);
+border-radius: 5px;
+padding: 10px 10px;
+h1{text-shadow: rgba(240, 248, 255, 0.68) 1px 1px 10px  ;color: white;text-align: center; font-weight: normal;}
+
+}
+.ticket{
+    height: 250px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    #tsp1{
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        background: black;
+        position: absolute;
+        top: -25px;
+        left: 25%;
+    }
+    #tsp2{
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        background: black;
+        position: absolute;
+        bottom: -25px;
+        left: 25%;
+    }
+   #tsp3{
+    border: 2px dashed black;
+    height: 100%;
+    position: absolute;
+        left: 27.1%;
+   }
+   .ticket-img{
+    height: 100%;
+    width: 27.1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   gap: 0;
+   .qr{
+    height: 200px !important;
+    width:200px;
+display: flex;
+align-items: center;
+justify-content: center;   
+    img{
+
+        height: 150px !important;
+        width:150px;
+    }
+   }
+   h4{
+    margin:0 0 10px 0;
+    font-weight: normal;
+    color: black;
+   }}
+   .ticket-dest{
+    position: relative;
+    top: 40px;
+    height: 10%;
+    margin-left: 23px;
+    width: 69%;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+span{
+    width:60px;
+border: 1.5px dashed grey;
+}
+img{
+    width: 38px;
+    transform: rotate(45deg);
+}
+
+    h2{
+        margin: 0;
+        color: black;
+
+    }
+   }
+}
+.ticket-details{
+    position: absolute;
+    top: 160px;
+    margin-left: 30%;
+    width: 69.2%;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    div{
+        display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         h4,h5{
+            margin: 2px;
+            font-weight: normal;
+         }
+         h4{
+            color: black;
+         }
+         h5{
+            color: rgba(128, 128, 128, 0.511);
+         }
+    }
+}
+#ticket-cancel-btn{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    background-color: transparent;
+    border:1px solid rgba(128, 128, 128, 0.511);
+    color:  red; 
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    
+
+}
+
+#ticket-cost{
+
+    h3{
+        color: white;
+    }
+}
+#ticket-cancel-btn:hover{
+    color: white;
+    background-color: red;
+    border:1px solid transparent;
+}
+
+.l-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h4,h5{
+       margin: 2px;
+       font-weight: normal;
+    }
+    h4{
+       color: black;
+       width: 150px;
+       text-align: center;
+    }
+    h5{
+       color: rgba(128, 128, 128, 0.511);
+    }
+}
+#imgg:hover{
+  transform: scale(1.2) !important;
+  transition: transform 1s ease !important;
+   cursor: pointer !important;
+}
